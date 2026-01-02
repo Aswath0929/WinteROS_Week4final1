@@ -61,20 +61,20 @@ def generate_launch_description():
 
     # Define the path to your URDF or Xacro file
     urdf_file_path = PathJoinSubstitution([
-        pkg_bme_ros2_simple_arm,  # Replace with your package name
+        pkg_erc_ros2_simple_arm,  # Replace with your package name
         "urdf",
         LaunchConfiguration('model')  # Replace with your URDF or Xacro file
     ])
 
     gz_bridge_params_path = os.path.join(
-        get_package_share_directory('bme_ros2_simple_arm'),
+        get_package_share_directory('erc_ros2_simple_arm'),
         'config',
         'gz_bridge.yaml'
     )
 
     robot_controllers = PathJoinSubstitution(
         [
-            get_package_share_directory('bme_ros2_simple_arm'),
+            get_package_share_directory('erc_ros2_simple_arm'),
             'config',
             'controller_position.yaml',
         ]
@@ -82,7 +82,7 @@ def generate_launch_description():
 
     world_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_bme_ros2_simple_arm, 'launch', 'world.launch.py'),
+            os.path.join(pkg_erc_ros2_simple_arm, 'launch', 'world.launch.py'),
         ),
         launch_arguments={
         'world': LaunchConfiguration('world'),
@@ -93,7 +93,7 @@ def generate_launch_description():
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
-        arguments=['-d', PathJoinSubstitution([pkg_bme_ros2_simple_arm, 'rviz', LaunchConfiguration('rviz_config')])],
+        arguments=['-d', PathJoinSubstitution([pkg_erc_ros2_simple_arm, 'rviz', LaunchConfiguration('rviz_config')])],
         condition=IfCondition(LaunchConfiguration('rviz')),
         parameters=[
             {'use_sim_time': LaunchConfiguration('use_sim_time')},
