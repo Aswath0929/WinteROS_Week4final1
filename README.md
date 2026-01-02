@@ -76,9 +76,9 @@ Let's get started!
 
 ## Download ROS package
 
-To download the starter package, clone the following git repo with the `starter-branch` (using the `-b branch` flag) into your colcon workspace:
+To download the starter package, clone the following git repo into your colcon workspace:
 ```bash
-git clone -b starter-branch https://github.com/MOGI-ROS/Week-9-10-Simple-arm
+git clone https://github.com/Aswath0929/WinteROS_Week4final1
 ```
 
 Let's take a look what's inside the `erc_ros2_simple_arm` package with the `tree` command!
