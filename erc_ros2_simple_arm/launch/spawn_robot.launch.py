@@ -9,9 +9,9 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
 
-    pkg_bme_ros2_simple_arm = get_package_share_directory('bme_ros2_simple_arm')
+    pkg_erc_ros2_simple_arm = get_package_share_directory('erc_ros2_simple_arm')
 
-    gazebo_models_path, ignore_last_dir = os.path.split(pkg_bme_ros2_simple_arm)
+    gazebo_models_path, ignore_last_dir = os.path.split(pkg_erc_ros2_simple_arm)
     os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path
 
     rviz_launch_arg = DeclareLaunchArgument(
