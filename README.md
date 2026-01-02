@@ -1396,4 +1396,6 @@ Integrate. Coordinate. Make the robot and arm act as one coherent unit.
 The suit doesn’t come together automatically.
 
 You assemble it.
-<img src="integratedbot.png" width="800">
+
+
+<img src="integratedbot.png" width="400">
