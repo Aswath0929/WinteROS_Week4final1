@@ -1366,36 +1366,56 @@ It plans.
 It reasons about its own body.
 And it moves with purpose — because you designed the system that tells it how.
 
-# The Assignment | One Final Task!
+# FINAL PROJECT | One Last Task!
 You’ve given the robot perception.
 You’ve given the arm intelligence and control.
 
-Now comes the real test.
+Now comes the real test — the point where systems stop existing on paper and start behaving like a machine.
 
-Your mission is to integrate the mobile robot with the robotic arm — two independent systems becoming a single coordinated platform. Locomotion and manipulation must work together, sharing data, timing, and intent through ROS.
+Up to this point, the mobile base and the robotic arm have lived separate lives. One explored the environment. One manipulated it. Each worked well in isolation — like early Iron Man prototypes sitting on separate workbenches. Useful. Impressive. But not a suit.
 
-The goal is simple to say and difficult to execute:
+Your mission now is to integrate them — to make mobility and manipulation operate as a single coordinated platform. The base must no longer wander without purpose. The arm must no longer act without context. They need to share data, timing, intent, and consequence through ROS.
 
-Build a system where the robot moves to a target… and the arm completes the task once it arrives.
+The objective is simple to say and difficult to execute:
+
+Build a system where the robot navigates to the target… and the arm completes the task once it arrives.
+
+The base handles global motion.
+The arm handles precision motion.
+Together, they accomplish work.
 
 Navigation meets inverse kinematics.
-Base control meets precision articulation.
-Two subsystems — one machine.
+Path planning meets grasp execution.
+Perception, localization, control — fused.
 
-Just like Stark’s suit, every component must stop acting alone and begin operating as part of a unified system.
+Just like Stark’s suit, every subsystem must stop thinking “I” and start thinking “we.” No more isolated nodes doing their own job. You’re building coordination logic — who waits, who acts, who decides, and what happens when things go wrong.
 
-This is not a step-by-step exercise.
+This will not be a step-by-step recipe.
+There is no “copy this launch file and you’re done.”
+
+Instead:
+
+You will design message flows.
+You will decide what modules talk to each other.
+You will determine who is in command — base or arm — and when that authority switches.
 
 Clues, hints, and mission briefings will be released gradually —
-exactly the way new suit capabilities are unlocked in the lab. 
+the way Stark unlocks new suit capabilities only when you’re ready for them.
 
 Your task now:
 
-Integrate. Coordinate. Make the robot and arm act as one coherent unit.
+Integrate. Synchronize. Orchestrate motion.
+Make the mobile robot and arm function as one coherent autonomous unit.
 
-The suit doesn’t come together automatically.
+The suit doesn’t assemble itself.
+It doesn’t magically work on the first try.
 
-You assemble it.
+It comes together through iteration, debugging lasers, broken servos, and sudden breakthroughs at 3 a.m.
+
+You’re not just running packages anymore.
+You’re architecting a system.
+
+Build it.
 
 
 <img src="integratedbot.png" width="400">
